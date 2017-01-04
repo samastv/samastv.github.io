@@ -1,0 +1,164 @@
+body {
+  background:url(http://cdn.wallpapersafari.com/28/19/obxBz5.png) center center;
+}
+
+.main {
+	position: absolute;
+ 	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	margin: auto;
+  	max-width: 95%
+  	background-image: url("geometric.gif");
+}
+
+.lineOne {
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+  	animation: 
+    	typing1 5s steps(40, end),
+    	blink-caret .25s step-end 20;
+}
+
+.lineTwo {
+	animation-delay: 5s;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+  	animation: 
+    	typing2 5s steps(40, end),
+    	blink-caret .25s step-end 20;
+}
+
+.lineTwoCopy {
+	webkit-animation: opacity 5.1s; /* Safari 4+ */
+  	moz-animation: opacity 5.1s; /* Fx 5+ */
+	o-animation: opacity 5.1s; /* Opera 12+ */
+	animation: opacity 5.1s; /* IE 10+, Fx 29+ */
+}
+
+.lineThree {
+	animation-delay: 10s;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+  	animation: 
+    	typing2 5s steps(40, end),
+    	blink-caret .25s step-end infinite;
+}
+
+.lineThreeCopy {
+	webkit-animation: opacity 10.2s; /* Safari 4+ */
+  	moz-animation: opacity 10.2s; /* Fx 5+ */
+	o-animation: opacity 10.2s; /* Opera 12+ */
+	animation: opacity 10.2s; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes opacity {
+  0%, 99% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes opacity {
+  0%, 99%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes opacity {
+  0%, 99%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes opacity {
+  0%, 99%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes typing1 {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes typing2 {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  	from, to { border-color: transparent }
+  	50% { border-color: orange; }
+}
+
+#name a {
+	color: #2b7ddb;
+}
+
+#facebook a {
+	color: #3b5998;
+}
+
+#twitter a {
+	color: #0084b4;
+}
+
+#github a {
+	color: black;
+}
+
+#instagram a {
+	color: #8a3ab9;
+}
+
+#googlePlus a {
+	color: #d34836;
+}
+
+#name {
+	font-size: 70%;
+}
+
+#description {
+	font-size: 70%;
+}
+
+#github {
+	font-size: 70%;
+}
+
+#facebook {
+	font-size: 70%;
+}
+
+#twitter {
+	font-size: 70%;
+}
+
+#instagram {
+	font-size: 70%;
+}
+
+#googlePlus {
+	font-size: 70%;
+}
+
+#show, #show2 {
+	font-size: 70%;
+	border: none;
+	background-color: transparent;
+	color: black;
+}
+
+#hide, #hide2 {
+	font-size: 50%;
+	border: none;
+	background-color: transparent;
+	color: black;
+}
+
+
+
