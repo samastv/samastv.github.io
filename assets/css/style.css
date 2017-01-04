@@ -146,10 +146,14 @@ body {
 	font-size: 70%;
 }
 
-#show, #show2 {
+#show, #show2, #resume {
 	font-size: 70%;
 	border: none;
 	background-color: transparent;
+	color: black;
+}
+
+#resume a {
 	color: black;
 }
 
