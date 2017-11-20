@@ -1,5 +1,7 @@
 body {
-	background-image: url("background.png");
+/*	background-image: url("background.png");
+*/	
+	background-color: #190C40;
 	background-repeat: repeat-y, repeat-x;
 	color: white;
 }
