@@ -1,0 +1,10 @@
+body {
+	background-image: url("background.png");
+	background-repeat: repeat-y, repeat-x;
+	color: white;
+}
+
+h1 {
+	position: relative;
+	text-align: center;
+}
