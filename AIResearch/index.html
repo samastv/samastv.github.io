@@ -11,15 +11,19 @@
 		<link href="style.css" rel='stylesheet' type='text/css' />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
+			var count = 0; 
 			function myFunction() {
-		        var h = document.createElement("h2");
-		        var t = document.createTextNode("Hello World");
-		        h.appendChild(t);
-		        document.body.appendChild(h);
-		        h = document.createElement("h1");
-		        t = document.createTextNode("Hello World");
-		        h.appendChild(t);
-		        document.body.appendChild(h);
+				if (count <= 5) {
+			        var h = document.createElement("h2");
+			        var t = document.createTextNode("Hello World");
+			        h.appendChild(t);
+			        document.body.appendChild(h);
+			        h = document.createElement("h1");
+			        t = document.createTextNode("Hello World");
+			        h.appendChild(t);
+			        document.body.appendChild(h);
+			        count++;
+			    }
 		    }
 		</script>
 	</head>
