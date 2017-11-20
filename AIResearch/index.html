@@ -12,10 +12,28 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
 			var count = 0; 
+			var t;
 			function myFunction() {
+				if (count == 0) {
+			        t = document.createTextNode("Here's my first question.");
+				}
+				else if (count == 1) {
+			        t = document.createTextNode("Here's my second question.");
+				}
+				else if (count == 2) {
+					t = document.createTextNode("Here's my third question.");
+				}
+				else if (count == 3) {
+					t = document.createTextNode("Here's my fourth question.");
+				}
+				else if (count == 4) {
+					t = document.createTextNode("Here's my fifth question.");
+				}
+				else if (count == 5) {
+					t = document.createTextNode("Here's my last question.");
+				}
 				if (count <= 5) {
-			        var h = document.createElement("h2");
-			        var t = document.createTextNode("Here's my question.");
+					var h = document.createElement("h2");
 			        h.appendChild(t);
 			        document.body.appendChild(h);
 			        h = document.createElement("h1");
