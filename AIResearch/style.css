@@ -1,6 +1,6 @@
 body {
 	background-image: url("background.png");
-	background-repeat: repeat-y;
+	background-repeat: repeat-y, repeat-x;
 	color: white;
 }
 
@@ -16,7 +16,4 @@ h2 {
 }
 
 button {
-	max-width: 100%;
-    height: auto;
-    width: auto\9; /* ie8 */
 }
