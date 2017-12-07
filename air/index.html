@@ -15,26 +15,14 @@
 			var t;
 			function myFunction() {
 				if (count == 0) {
-			        t = document.createTextNode("Here's my first question.");
+			        t = document.createTextNode("Hey Siri, what's the weather today?");
 				}
-				else if (count == 1) {
-			        t = document.createTextNode("Here's my second question.");
-				}
-				else if (count == 2) {
-					t = document.createTextNode("Here's my third question.");
-				}
-				else if (count == 3) {
-					t = document.createTextNode("Here's my fourth question.");
-				}
-				else if (count == 4) {
-					t = document.createTextNode("Here's my last question.");
-				}
-				if (count <= 4) {
+				if (count < 1) {
 					var h = document.createElement("h2");
 			        h.appendChild(t);
 			        document.body.appendChild(h);
 			        h = document.createElement("h1");
-			        t = document.createTextNode("Here's your answer.");
+			        t = document.createTextNode("Today is 23 degrees with snow showers in Ann Arbor.");
 			        h.appendChild(t);
 			        document.body.appendChild(h);
 			        count++;
