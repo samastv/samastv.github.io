@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>Location</h1>
+
+  <script>
+    document.getElementById("result").innerHTML = "Paragraph changed!";
+    $(document).ready(function(){
+        $("button").click(function(){
+            $.post("http://localhost:3000",
+            {
+              location: "San Francisco"
+            },
+            function(data,status){
+                alert("Data: " + data + "\nStatus: " + status);
+            });
+        });
+    });
+  </script>
+
+  <p id="result"></p>
+
+</body>
+</html>
