@@ -41,18 +41,18 @@
 			    $("#show").click(function(){
 			        $("#about").show();
 			        $("#hide").show();
-			        $("#current").hide();
 			        $("#hide2").hide();
 							$("#skills").show();
+							$(".timeline").hide();
 							move();
 			    });
 			    $("#hide2").click(function(){
-			        $("#current").hide();
 			        $("#hide2").hide();
+							$(".timeline").hide();
 			    });
 			    $("#show2").click(function(){
-			        $("#current").show();
 			        $("#hide2").show();
+							$(".timeline").show();
 			        $("#about").hide();
 			        $("#hide").hide();
 							$("#skills").hide();
@@ -86,91 +86,131 @@
 				<div class = "lineThree">
 					<h1>
 						<button id="show">About me.</button>
+						<button id="show2">Experience.</button>
 						<button id="show"><a href = "http://blog.samast.me">Medium.</a></button>
-						<button id="show2">Projects.</button>
 						<button id = "resume"><a href = "assets/Resume.png">Resume.</a></span>
 					</h1>
-					<!-- <p> -->
-						<p id = "about" style="display:none">
-							University of Michigan. Class of 2021.  I am currently a sophomore
-							studying Computer Science at the University of Michigan College of
-							Engineering. I have already begun exploring my interests and meeting
-							amazing people through organizations like the UM Solar Car Team and
-							the Department of Public Safety and Security. I am excited to continue
-							working with these organizations for the years to come. Although I
-							am still early in my education, I have embarked on many personal
-							projects to pursue my interests and have a fundamental understanding
-							of what the industry expects. The combination of my dedication and
-							ethic will prove to be very useful in any environment. If this seems
-							intriguing, please connect with me on LinkedIn and leave me a message.
-						</p>
 
-						<p id = "current" style="display:none">
-							Neighbor Ninja. Alerts university students about crimes happening
-							on campus and helps lead them to safety.
-							<a href = "assets/ProjectOverview.pdf">Project overview.</a><br>
-							AMZNtrackr. Tracks prices of Amazon products, and notifies users when
-							it changes. <a href = "https://github.com/samastv/AMZNtrackr">GitHub.</a><br>
-							MathEm. High school freshman year hackathon project which generates
-							random mathematics problems, and builds skills through timed tests.
-							<a href = "https://github.com/samastv/MathEm">GitHub.</a>
-						</p>
-					<!-- </p> -->
-
-						<div id = "skills" style="display:none">
-							<div class = "column">
-								<p>iOS/Swift</p>
-								<div class="container">
-								  <div id="skillsIos">70%</div>
-								</div>
-
-								<p>Python</p>
-								<div class="container">
-								  <div id="skillsPy">70%</div>
-								</div>
-
-								<p>HTML</p>
-								<div class="container">
-								  <div id="skillsHtml">85%</div>
-								</div>
-
-								<p>Photoshop</p>
-								<div class="container">
-								  <div id="skillsPs">90%</div>
-								</div>
-
-								<p>C++</p>
-								<div class="container">
-								  <div id="skillsCpp">90%</div>
-								</div>
-							</div>
-							<div class = "column">
-								<p>Lightroom</p>
-								<div class="container">
-								  <div id="skillsLr">90%</div>
-								</div>
-
-								<p>Photography</p>
-								<div class="container">
-								  <div id="skillsPhoto">95%</div>
-								</div>
-
-								<p>Teamwork</p>
-								<div class="container">
-								  <div id="skillsTeam">100%</div>
-								</div>
-
-								<p>Leadership</p>
-								<div class="container">
-								  <div id="skillsLead">100%</div>
-								</div>
-							</div>
-
-						</div>
-					<h2><button id="hide" style="display:none">Hide</button><button id="hide2" style="display:none">Hide</button></h2>
 				</div>
 
 			</div>
+
+			<p id = "about" style="display:none">
+				University of Michigan. Class of 2021.  I am currently a sophomore
+				studying Computer Science at the University of Michigan College of
+				Engineering. I have already begun exploring my interests and meeting
+				amazing people through organizations like the UM Solar Car Team and
+				the Department of Public Safety and Security. I am excited to continue
+				working with these organizations for the years to come. Although I
+				am still early in my education, I have embarked on many personal
+				projects to pursue my interests and have a fundamental understanding
+				of what the industry expects. The combination of my dedication and
+				ethic will prove to be very useful in any environment. If this seems
+				intriguing, please connect with me on LinkedIn and leave me a message.
+			</p>
+
+			<div class="timeline" style="display:none">
+				<div class="holder left">
+					<div class="content">
+						<h2>Yantra Inc. Internship</h2>
+						<p>Developed an integration, or two-sided bridge of data,
+							between NetSuite and Shopify. Data regarding customers, orders,
+							and items will be automatically synced between the two services
+							and will be updated when changes are made on either side.
+					</div>
+				</div>
+				<div class="holder right">
+					<div class="content">
+						<h2>Cape Drive</h2>
+						<p>Integration between Google Drive and thecape.ai which allows
+							you to ask questions about your Google Drive docs.
+						<a href = "http://ai.samast.me">Website.</a></p>
+					</div>
+				</div>
+				<div class="holder left">
+					<div class="content">
+						<h2>Stockr</h2>
+						<p>Simple algorithm which scrapes Yahoo Finance and StockTwits
+							and delivers graphs and sentiment data.
+						<a href = "https://github.com/samastv/Stockr">Github.</a></p>
+					</div>
+				</div>
+				<div class="holder right">
+					<div class="content">
+						<h2>Neighbor Ninja</h2>
+						<p>Alerts university students about crimes happening
+						on campus and helps lead them to safety.
+						<a href = "assets/ProjectOverview.pdf">Project overview.</a></p>
+					</div>
+				</div>
+				<div class="holder left">
+					<div class="content">
+						<h2>AMZNtrackr</h2>
+						<p>Tracks prices of Amazon products, and notifies users when
+						it changes. <a href = "https://github.com/samastv/AMZNtrackr">GitHub.</a></p>
+					</div>
+				</div>
+				<div class="holder right">
+					<div class="content">
+						<h2>MathEm</h2>
+						<p>High school freshman year hackathon project which generates
+						random mathematics problems, and builds skills through timed tests.
+						<a href = "https://github.com/samastv/MathEm">GitHub.</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div id = "skills" style="display:none">
+				<div class = "column">
+					<p>iOS/Swift</p>
+					<div class="container">
+						<div id="skillsIos">70%</div>
+					</div>
+
+					<p>Python</p>
+					<div class="container">
+						<div id="skillsPy">70%</div>
+					</div>
+
+					<p>HTML</p>
+					<div class="container">
+						<div id="skillsHtml">85%</div>
+					</div>
+
+					<p>Photoshop</p>
+					<div class="container">
+						<div id="skillsPs">90%</div>
+					</div>
+
+					<p>C++</p>
+					<div class="container">
+						<div id="skillsCpp">90%</div>
+					</div>
+				</div>
+				<div class = "column">
+					<p>Lightroom</p>
+					<div class="container">
+						<div id="skillsLr">90%</div>
+					</div>
+
+					<p>Photography</p>
+					<div class="container">
+						<div id="skillsPhoto">95%</div>
+					</div>
+
+					<p>Teamwork</p>
+					<div class="container">
+						<div id="skillsTeam">100%</div>
+					</div>
+
+					<p>Leadership</p>
+					<div class="container">
+						<div id="skillsLead">100%</div>
+					</div>
+				</div>
+
+			</div>
+			<h2><button id="hide" style="display:none">Hide</button><button id="hide2" style="display:none">Hide</button></h2>
 
 			<div class = "lineFour">
 				<h1> </h1>
