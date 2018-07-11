@@ -148,6 +148,14 @@ p {
     width: 100%; /* Full width */
 }
 
+#skills {
+	display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
 #skillsIos, #skillsPy, #skillsHtml, #skillsPs, #skillsCpp, #skillsLr, #skillsPhoto, #skillsTeam, #skillsLead {
 	width: 10%;
   height: 30px;
