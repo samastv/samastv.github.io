@@ -21,16 +21,29 @@
 		<link href="assets/css/style.css" rel='stylesheet' type='text/css' />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
-			$(document).ready(function(){
+		function move() {
+			var idArray = ["skillsIos", "skillsPy", "skillsHtml", "skillsPs", "skillsCpp", "skillsLr", "skillsPhoto", "skillsTeam", "skillsLead"];
+			var widthArray = [70, 70, 85, 90, 90, 90, 95, 100, 100];
+
+			for (var i = 0; i < idArray.length; i++) {
+				$("#" + idArray[i]).animate({
+				    width: widthArray[i] + "%"
+				}, 2500);
+			}
+		}
+			$(document).ready(function() {
 			    $("#hide").click(function(){
 			        $("#about").hide();
 			        $("#hide").hide();
+							$("#skills").hide();
 			    });
 			    $("#show").click(function(){
 			        $("#about").show();
 			        $("#hide").show();
 			        $("#current").hide();
 			        $("#hide2").hide();
+							$("#skills").show();
+							move();
 			    });
 			    $("#hide2").click(function(){
 			        $("#current").hide();
@@ -41,6 +54,7 @@
 			        $("#hide2").show();
 			        $("#about").hide();
 			        $("#hide").hide();
+							$("#skills").hide();
 			    });
 			});
 		</script>
@@ -50,23 +64,109 @@
 		<div class = "main">
 
 			<div class = "lineOne">
-				<h1><span id = "name"><a href = "mailto:samastv99@gmail.com">Samast Varma.</a></span> <span id = "description">Student. Leader.</span></h1>
+				<h1>
+					<span id = "name"><a href = "mailto:samastv99@gmail.com">Samast Varma.</a></span>
+					<span id = "description">Student. Leader.</span>
+				</h1>
 			</div>
 
 			<div class = "lineTwoCopy">
 				<div class = "lineTwo">
-					<h1><span id = "github"><a href = "https://github.com/samastv">Github.</a></span> <span id = "facebook"><a href="https://www.facebook.com/samastv">Facebook.</a></span> <span id = "twitter"><a href="https://twitter.com/SamastVarma">Twitter.</a></span> <span id = "instagram"><a href = "https://www.linkedin.com/in/samast/">LinkedIn.</a></span> <span id = "flickr"><a href = "photography/index.html">Photography.</a></span></h1>
+					<h1>
+						<span id = "github"><a href = "https://github.com/samastv">Github.</a></span>
+						<span id = "facebook"><a href="https://www.facebook.com/samastv">Facebook.</a></span>
+						<span id = "twitter"><a href="https://twitter.com/SamastVarma">Twitter.</a></span>
+						<span id = "instagram"><a href = "https://www.linkedin.com/in/samast/">LinkedIn.</a></span>
+						<span id = "flickr"><a href = "photography/index.html">Photography.</a></span></h1>
 				</div>
 			</div>
 
 			<div class = "lineThreeCopy">
 				<div class = "lineThree">
-					<h1><button id="show">About me.</button> <button id="show"><a href = "http://blog.samast.me">Medium.</a></button> <button id="show2">Projects.</button> <button id = "resume"><a href = "assets/Resume.png">Resume.</a></span></h1>
-					<p>
-						<span id = "about" style="display:none">University of Michigan.<br>Class of 2021.<br><br>I am currently a freshman studying Computer Science at the University of Michigan<br>College of Engineering. I have already begun exploring my interests<br>and meeting amazing people through organizations like the UM Solar Car Team<br>and the Department of Public Safety and Security. I am excited to continue<br>working with these organizations for the years to come. Although I am still early in<br>my education, I have embarked on many personal projects to pursue my interests<br>and have a fundamental understanding of what the industry expects. The<br>combination of my dedication and ethic will prove to be very useful in any environment.<br>If this seems intriguing, please connect with me on LinkedIn and leave me a message.</span> 
-						<span id = "current" style="display:none">Neighbor Ninja. Alerts university students about crimes happening on campus <br> and helps lead them to safety. <a href = "assets/ProjectOverview.pdf">Project overview.</a><br> AMZNtrackr. Tracks prices of Amazon products, and notifies users when it <br> changes. <a href = "https://github.com/samastv/AMZNtrackr">GitHub.</a><br> MathEm. High school freshman year hackathon project which <br> generates random mathematics problems, and builds skills through timed tests. <a href = "https://github.com/samastv/MathEm">GitHub.</a></span></p>
+					<h1>
+						<button id="show">About me.</button>
+						<button id="show"><a href = "http://blog.samast.me">Medium.</a></button>
+						<button id="show2">Projects.</button>
+						<button id = "resume"><a href = "assets/Resume.png">Resume.</a></span>
+					</h1>
+					<!-- <p> -->
+						<p id = "about" style="display:none">
+							University of Michigan. Class of 2021.  I am currently a sophomore
+							studying Computer Science at the University of Michigan College of
+							Engineering. I have already begun exploring my interests and meeting
+							amazing people through organizations like the UM Solar Car Team and
+							the Department of Public Safety and Security. I am excited to continue
+							working with these organizations for the years to come. Although I
+							am still early in my education, I have embarked on many personal
+							projects to pursue my interests and have a fundamental understanding
+							of what the industry expects. The combination of my dedication and
+							ethic will prove to be very useful in any environment. If this seems
+							intriguing, please connect with me on LinkedIn and leave me a message.
+						</p>
+
+						<p id = "current" style="display:none">
+							Neighbor Ninja. Alerts university students about crimes happening
+							on campus and helps lead them to safety.
+							<a href = "assets/ProjectOverview.pdf">Project overview.</a><br>
+							AMZNtrackr. Tracks prices of Amazon products, and notifies users when
+							it changes. <a href = "https://github.com/samastv/AMZNtrackr">GitHub.</a><br>
+							MathEm. High school freshman year hackathon project which generates
+							random mathematics problems, and builds skills through timed tests.
+							<a href = "https://github.com/samastv/MathEm">GitHub.</a>
+						</p>
+					<!-- </p> -->
+
+						<div id = "skills" style="display:none">
+
+								<p>iOS/Swift</p>
+								<div class="container">
+								  <div id="skillsIos">70%</div>
+								</div>
+
+								<p>Python</p>
+								<div class="container">
+								  <div id="skillsPy">70%</div>
+								</div>
+
+								<p>HTML</p>
+								<div class="container">
+								  <div id="skillsHtml">85%</div>
+								</div>
+
+								<p>Photoshop</p>
+								<div class="container">
+								  <div id="skillsPs">90%</div>
+								</div>
+
+								<p>C++</p>
+								<div class="container">
+								  <div id="skillsCpp">90%</div>
+								</div>
+
+								<p>Lightroom</p>
+								<div class="container">
+								  <div id="skillsLr">90%</div>
+								</div>
+
+								<p>Photography</p>
+								<div class="container">
+								  <div id="skillsPhoto">95%</div>
+								</div>
+
+								<p>Teamwork</p>
+								<div class="container">
+								  <div id="skillsTeam">100%</div>
+								</div>
+
+								<p>Leadership</p>
+								<div class="container">
+								  <div id="skillsLead">100%</div>
+								</div>
+
+						</div>
 					<h2><button id="hide" style="display:none">Hide</button><button id="hide2" style="display:none">Hide</button></h2>
 				</div>
+
 			</div>
 
 			<div class = "lineFour">

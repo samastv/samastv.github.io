@@ -2,13 +2,18 @@ body {
 	background-color: black;
 */}
 
+p {
+	white-space: normal;
+	align: center;
+}
+
 .main {
 	position: absolute;
  	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-  	margin: auto;
-  	max-width: 95%
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	max-width: 95%
 }
 
 .lineOne {
@@ -36,7 +41,7 @@ body {
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .15em; /* Adjust as needed */
-  	animation: 
+  	animation:
     	blink-caret .25s step-end infinite;
 }
 
@@ -135,6 +140,19 @@ body {
 	color: gray;
 }
 
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
 
+/* Container for skill bars */
+.container {
+    width: 100%; /* Full width */
+}
 
-
+#skillsIos, #skillsPy, #skillsHtml, #skillsPs, #skillsCpp, #skillsLr, #skillsPhoto, #skillsTeam, #skillsLead {
+	width: 10%;
+  height: 30px;
+  background-color: #83BCED;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
