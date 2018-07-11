@@ -2,7 +2,7 @@ body {
 	background-color: black;
 */}
 
-p {
+p, h1 {
 	white-space: normal;
 	align: center;
 }
