@@ -1,14 +1,11 @@
 html {
-	overflow: scroll;
-	margin: 0;
+	overflow: auto;
+	margin: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-	box-sizing: padding-box;
-    -moz-box-sizing: padding-box;
-    -webkit-box-sizing: padding-box;
-    padding-top: 60px;
+	max-height: 100%;
 }
 
 body {
@@ -22,6 +19,7 @@ p, h1 {
 }
 
 #main {
+	overflow: auto;
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .15em; /* Adjust as needed */
@@ -158,6 +156,7 @@ p, h1 {
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
+	overflow: auto;
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
