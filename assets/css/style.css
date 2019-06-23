@@ -1,132 +1,132 @@
 html {
-	overflow: auto;
-	margin: auto;
+  overflow: auto;
+  margin: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-	max-height: 100%;
+  max-height: 100%;
 }
 
 body {
-	background-color: black;
+  background-color: black;
 }
 
 p, h1 {
-	white-space: normal;
-	align: center;
-	color: white;
+  white-space: normal;
+  align: center;
+  color: white;
 }
 
 #main {
-	overflow: auto;
-	white-space: nowrap; /* Keeps the content on a single line */
-	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-	letter-spacing: .15em; /* Adjust as needed */
+  overflow: auto;
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
 }
 
 .lineFour {
-	border-left: .15em solid orange; /* The typwriter cursor */
-	white-space: nowrap; /* Keeps the content on a single line */
-	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-	letter-spacing: .15em; /* Adjust as needed */
-  	animation:
-    	blink-caret .25s step-end infinite;
+  border-left: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+    animation:
+      blink-caret .25s step-end infinite;
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  	from, to { border-color: transparent }
-  	50% { border-color: orange; }
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
 }
 
 #name a {
-	color: #83BCED;
-	text-decoration: none;
+  color: #83BCED;
+  text-decoration: none;
 }
 
 #facebook a {
-	color: #3b5998;
-	text-decoration: none;
+  color: #3b5998;
+  text-decoration: none;
 }
 
 #twitter a {
-	color: #0084b4;
-	text-decoration: none;
+  color: #0084b4;
+  text-decoration: none;
 }
 
 #github a {
-	color: #6e5494;
-	text-decoration: none;
+  color: #6e5494;
+  text-decoration: none;
 }
 
 #instagram a {
-	color: #0077B5;
-	text-decoration: none;
+  color: #0077B5;
+  text-decoration: none;
 }
 
 #flickr a {
-	color: #0063DC;
-	text-decoration: none;
+  color: #0063DC;
+  text-decoration: none;
 }
 
 #name {
-	font-size: 125%;
-	text-decoration: none;
+  font-size: 125%;
+  text-decoration: none;
 }
 
 #description {
-	font-size: 70%;
-	color: white;
+  font-size: 70%;
+  color: white;
 }
 
 #github {
-	font-size: 70%;
+  font-size: 70%;
 }
 
 #facebook {
-	font-size: 70%;
+  font-size: 70%;
 }
 
 #twitter {
-	font-size: 70%;
+  font-size: 70%;
 }
 
 #instagram {
-	font-size: 70%;
+  font-size: 70%;
 }
 
 #flickr {
-	font-size: 70%;
+  font-size: 70%;
 }
 
 #resume a {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 #show, #show2, #resume {
-	font-size: 70%;
-	border: none;
-	background-color: transparent;
-	color: white;
-	padding: 0px;
+  font-size: 70%;
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 0px;
 }
 
 #show a {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 
 #hide, #hide2 {
-	font-size: 50%;
-	border: none;
-	background-color: transparent;
-	color: white;
+  font-size: 50%;
+  border: none;
+  background-color: transparent;
+  color: white;
 }
 
 .lineThree a {
-	color: gray;
+  color: gray;
 }
 
 /* Make sure that padding behaves as expected */
@@ -138,7 +138,7 @@ p, h1 {
 }
 
 #skills {
-	display: flex;
+  display: flex;
 }
 
 .column {
@@ -146,7 +146,7 @@ p, h1 {
 }
 
 #skillsIos, #skillsPy, #skillsHtml, #skillsPs, #skillsCpp, #skillsLr, #skillsPhoto, #skillsTeam, #skillsLead {
-	width: 10%;
+  width: 10%;
   height: 30px;
   background-color: #83BCED;
   text-align: center;
@@ -156,11 +156,11 @@ p, h1 {
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
-	overflow: auto;
+  overflow: auto;
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-	color: white;
+  color: white;
 }
 
 /* The actual timeline (the vertical ruler) */
