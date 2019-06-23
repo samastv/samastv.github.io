@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 	<style>
 		@font-face {
 		    font-family: 'caviar_dreamsregular';
@@ -54,9 +55,9 @@
 	    	<h2>About Me</h2>
 	    </div>
 	    <div class="col">
-			I am currently a rising junior studying Computer Science at the University of Michigan College of Engineering. I have already begun exploring my interests and meeting amazing people through organizations like the UM Solar Car Team and the Department of Public Safety and Security. I am excited to continue working with these organizations for the years to come. Although I am still early in my education, I have embarked on many personal projects to pursue my interests and have a fundamental understanding of what the industry expects. The combination of my dedication and ethic will prove to be very useful in any environment. If this seems intriguing, please connect with me on LinkedIn and leave me a message.
+				I am currently a rising junior studying Computer Science at the University of Michigan College of Engineering. I have already begun exploring my interests and meeting amazing people through organizations like the UM Solar Car Team and the Department of Public Safety and Security. I am excited to continue working with these organizations for the years to come. Although I am still early in my education, I have embarked on many personal projects to pursue my interests and have a fundamental understanding of what the industry expects. The combination of my dedication and ethic will prove to be very useful in any environment. If this seems intriguing, please connect with me on LinkedIn and leave me a message.
 	    </div>
-	  </div>
+		</div>
 	</div>
 	</div>
 	<div class="container">
@@ -143,5 +144,51 @@
 	    </div>
 	  </div>
 	</div>
+	<footer class='container'>
+		<div class="row align-items-center">
+			<div class="col">
+			</div>
+			<div class="col">
+				<span class='fa-stack'>
+					<i class="far fa-circle fa-stack-2x"></i>
+					<i class="fab fa-github fa-stack-1x"></i>		
+				</span>
+				<span class='fa-stack'>
+					<i class="far fa-circle fa-stack-2x"></i>
+					<i class="fab fa-facebook-f fa-stack-1x"></i>		
+				</span>
+				<span class='fa-stack'>
+					<i class="far fa-circle fa-stack-2x"></i>
+					<i class="fab fa-twitter fa-stack-1x"></i>		
+				</span>
+				<span class='fa-stack'>
+					<i class="far fa-circle fa-stack-2x"></i>
+					<i class="fab fa-linkedin-in fa-stack-1x"></i>		
+				</span>
+				<span class='fa-stack'>
+					<i class="far fa-circle fa-stack-2x"></i>
+					<i class="fab fa-medium-m fa-stack-1x"></i>		
+				</span>
+				<span class='fa-stack'>
+					<i class="far fa-circle fa-stack-2x"></i>
+					<i class="fab fa-flickr fa-stack-1x"></i>		
+				</span>
+			</div>
+			<div class="col">
+			</div>
+		</div>
+	</footer>
+
+	<style>
+	.inverted {
+		filter: invert(100%);
+	}
+	</style>
+
+	<script>
+		$('.fa-stack').hover(
+				function(){ $(this).toggleClass('inverted') },
+		)
+	</script>
 </body>
 </html>
