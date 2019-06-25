@@ -1,227 +1,251 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114361966-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		  gtag('config', 'UA-114361966-1');
-		</script>
-
-		<link rel="icon" href="https://res.cloudinary.com/campus-job/image/upload/t_student-public-page/v1/profile_pictures/Wl87fc9dAc_20170919.jpg">
-		<title>Samast Varma</title>
-		<link href="assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<!-- <script src="assets/js/jquery.min.js"></script> -->
-		 <!-- Custom Theme files -->
-		<link href="assets/css/style.css" rel='stylesheet' type='text/css' />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script>
-		function move() {
-			var idArray = ["skillsIos", "skillsPy", "skillsHtml", "skillsPs", "skillsCpp", "skillsLr", "skillsPhoto", "skillsTeam", "skillsLead"];
-			var widthArray = [70, 70, 85, 90, 90, 90, 95, 100, 100];
-			for (var i = 0; i < idArray.length; i++) {
-				$("#" + idArray[i]).animate({
-				    width: widthArray[i] + "%"
-				}, 2500);
-			}
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<style>
+		@font-face {
+		    font-family: 'caviar_dreamsregular';
+		    src: url('./assets/fonts/caviardreams-webfont.woff2') format('woff2'),
+		         url('./assets/fonts/caviardreams-webfont.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
 		}
-			$(document).ready(function() {
-			    $("#hide").click(function(){
-			        $("#about").hide();
-			        $("#hide").hide();
-							$("#skills").hide();
-			    });
-			    $("#show").click(function(){
-			        $("#about").show();
-			        $("#hide").show();
-			        $("#hide2").hide();
-							$("#skills").show();
-							$(".timeline").hide();
-							move();
-			    });
-			    $("#hide2").click(function(){
-			        $("#hide2").hide();
-							$(".timeline").hide();
-			    });
-			    $("#show2").click(function(){
-			        $("#hide2").show();
-							$(".timeline").show();
-			        $("#about").hide();
-			        $("#hide").hide();
-							$("#skills").hide();
-			    });
-			});
-		</script>
-	</head>
+		@font-face {
+		    font-family: 'bebas_neueregular';
+		    src: url('./assets/fonts/bebasneue-webfont.woff2') format('woff2'),
+		         url('./assets/fonts/bebasneue-webfont.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		@font-face {
+		    font-family: 'times_sans_serifregular';
+		    src: url('./assets/fonts/times-sans-serif-webfont.woff2') format('woff2'),
+		         url('./assets/fonts/times-sans-serif-webfont.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+    	h2 {
+			font-family: times_sans_serifregular;
+			font-size: 18px;
+			font-stretch: extra-expanded;
+      	}
+      	h1 {
+      		font-family: 'Montserrat', sans-serif;
+      		font-weight: 400;
+      	}
+      	.navbar {
+      		margin-top: 20px;
+		    margin-bottom: 20px;
+		    letter-spacing: 5px;
+		}
+		.content {
+			font-family: 'Montserrat', sans-serif;
+      		font-weight: 300;
+		}
 
-	<body>
-		<div class = "main">
+		.title {
+			font-family: 'Montserrat', sans-serif;
+      		font-weight: 400;
+      		font-size: 40px;
+		}
+		a {
+			color: black;
+			text-decoration: none;
+		}
 
-			<div class = "lineOne">
-				<h1>
-					<span id = "name"><a href = "mailto:samastv99@gmail.com">Samast Varma.</a></span>
-					<span id = "description">Student. Leader.</span>
-				</h1>
-			</div>
-
-			<div class = "lineTwoCopy">
-				<div class = "lineTwo">
-					<h1>
-						<span id = "github"><a href = "https://github.com/samastv">Github.</a></span>
-						<span id = "facebook"><a href="https://www.facebook.com/samastv">Facebook.</a></span>
-						<span id = "twitter"><a href="https://twitter.com/SamastVarma">Twitter.</a></span>
-						<span id = "instagram"><a href = "https://www.linkedin.com/in/samast/">LinkedIn.</a></span>
-						<span id = "flickr"><a href = "photography/index.html">Photography.</a></span></h1>
-				</div>
-			</div>
-
-			<div class = "lineThreeCopy">
-				<div class = "lineThree">
-					<h1>
-						<button id="show">About me.</button>
-						<button id="show2">Experience.</button>
-						<button id="show"><a href = "http://blog.samast.me">Medium.</a></button>
-						<button id = "resume"><a href = "assets/Resume.pdf">Resume.</a></span>
-					</h1>
-
-				</div>
-
-			</div>
-
-			<p id = "about" style="display:none">
-				University of Michigan. Class of 2021.  I am currently a sophomore
-				studying Computer Science at the University of Michigan College of
-				Engineering. I have already begun exploring my interests and meeting
-				amazing people through organizations like the UM Solar Car Team and
-				the Department of Public Safety and Security. I am excited to continue
-				working with these organizations for the years to come. Although I
-				am still early in my education, I have embarked on many personal
-				projects to pursue my interests and have a fundamental understanding
-				of what the industry expects. The combination of my dedication and
-				ethic will prove to be very useful in any environment. If this seems
-				intriguing, please connect with me on LinkedIn and leave me a message.
-			</p>
-
-			<div class="timeline" style="display:none">
-				<div class="holder right">
-					<div class="content">
-						<h2>Salesforce</h2>
-						<p>Incoming Software Engineer Intern (Summer 2019)
-					</div>
-				</div>
-				<div class="holder left">
-					<div class="content">
-						<h2>Yantra Inc. Internship</h2>
-						<p>Developed an integration, or two-sided bridge of data,
-							between NetSuite and Shopify. Data regarding customers, orders,
-							and items will be automatically synced between the two services
-							and will be updated when changes are made on either side.
-					</div>
-				</div>
-				<div class="holder right">
-					<div class="content">
-						<h2>Cape Drive</h2>
-						<p>Integration between Google Drive and thecape.ai which allows
-							you to ask questions about your Google Drive docs.
-						<a href = "http://ai.samast.me">Website.</a></p>
-					</div>
-				</div>
-				<div class="holder left">
-					<div class="content">
-						<h2>Stockr</h2>
-						<p>Simple algorithm which scrapes Yahoo Finance and StockTwits
-							and delivers graphs and sentiment data.
-						<a href = "https://github.com/samastv/Stockr">Github.</a></p>
-					</div>
-				</div>
-				<div class="holder right">
-					<div class="content">
-						<h2>Neighbor Ninja</h2>
-						<p>Alerts university students about crimes happening
-						on campus and helps lead them to safety.
-						<a href = "assets/ProjectOverview.pdf">Project overview.</a></p>
-					</div>
-				</div>
-				<div class="holder left">
-					<div class="content">
-						<h2>AMZNtrackr</h2>
-						<p>Tracks prices of Amazon products, and notifies users when
-						it changes. <a href = "https://github.com/samastv/AMZNtrackr">GitHub.</a></p>
-					</div>
-				</div>
-				<div class="holder right">
-					<div class="content">
-						<h2>MathEm</h2>
-						<p>High school freshman year hackathon project which generates
-						random mathematics problems, and builds skills through timed tests.
-						<a href = "https://github.com/samastv/MathEm">GitHub.</a></p>
-					</div>
-				</div>
-			</div>
-
-			<div id = "skills" style="display:none">
-				<div class = "column">
-					<p>iOS/Swift</p>
-					<div class="container">
-						<div id="skillsIos">70%</div>
-					</div>
-
-					<p>Python</p>
-					<div class="container">
-						<div id="skillsPy">70%</div>
-					</div>
-
-					<p>HTML</p>
-					<div class="container">
-						<div id="skillsHtml">85%</div>
-					</div>
-
-					<p>Photoshop</p>
-					<div class="container">
-						<div id="skillsPs">90%</div>
-					</div>
-
-					<p>C++</p>
-					<div class="container">
-						<div id="skillsCpp">90%</div>
-					</div>
-				</div>
-				<div class = "column">
-					<p>Lightroom</p>
-					<div class="container">
-						<div id="skillsLr">90%</div>
-					</div>
-
-					<p>Photography</p>
-					<div class="container">
-						<div id="skillsPhoto">95%</div>
-					</div>
-
-					<p>Teamwork</p>
-					<div class="container">
-						<div id="skillsTeam">100%</div>
-					</div>
-
-					<p>Leadership</p>
-					<div class="container">
-						<div id="skillsLead">100%</div>
-					</div>
-				</div>
-
-			</div>
-			<h2><button id="hide" style="display:none">Hide</button><button id="hide2" style="display:none">Hide</button></h2>
-
-			<div class = "lineFour">
-				<h1> </h1>
-			</div>
-
+		@media only screen and (max-width: 400px) {
+		  h1 {
+		    font-size: 34px;
+		    padding-left: 5px;
+		  	padding-right: 5px;
+		  }
+		  .title {
+		  	font-size: 34px;
+		  }
+		  h2 {
+		  	font-size: 16px;
+		  	padding-left: 5px;
+		  	padding-right: 5px;
+		  }
+		  h3 {
+		  	font-size: 20px;
+		  	padding-left: 5px;
+		  	padding-right: 5px;
+		  }
+		  p {
+		  	padding-left: 5px;
+		  	padding-right: 5px;
+		  }
+		}
+    </style>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<nav class="navbar bg-faded">
+	  <div class="container" style="margin-bottom: 40px;">
+	    <ul class="nav navbar-nav navbar-logo mx-auto">
+	      <li class="nav-item">
+	        <h2>HI, I'M SAMAST VARMA<h2>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<div class="container" style="margin-bottom: 80px;">
+	    <div class="mx-auto title" style="width: 70%; text-align: center;">
+    		I am a student, leader, and innovator studying Computer Science at the University of Michigan.
 		</div>
-
-	</body>
-
+	</div>
+	<div class="container" style="margin-bottom: 40px;">
+	  <div class="row">
+	    <div class="col-lg-6">
+	    	<h1>About Me</h1>
+	    </div>
+	    <div class="col-lg-6 content">
+	    	<p>
+				I am currently a rising junior studying Computer Science at the University of Michigan College of Engineering. I have already begun exploring my interests and meeting amazing people through organizations like the UM Solar Car Team and the Department of Public Safety and Security. I am excited to continue working with these organizations for the years to come. Although I am still early in my education, I have embarked on many personal projects to pursue my interests and have a fundamental understanding of what the industry expects. The combination of my dedication and ethic will prove to be very useful in any environment. If this seems intriguing, please connect with me on LinkedIn and leave me a message.
+	    	</p>
+	    </div>
+		</div>
+	</div>
+	</div>
+	<div class="container" style="margin-bottom: 40px;">
+	  <div class="row">
+	    <div class="col-lg-6">
+			<h1>Resume</h1>
+	    </div>
+	    <div class="col-lg-6 content">
+	    	<h3>Education</h3>
+	    	<p>
+	    		<b>University of Michigan (Ann Arbor, MI)</b><br>
+				December 2020<br>
+				Computer Science<br>
+				College of Engineering<br>
+				GPA 3.472/4.00<br>
+	    	</p>
+	    	<h3>Experience</h3>
+	    	<p>
+	    		<b>Software Engineer Intern @ Salesforce (San Francisco, CA)</b><br>
+	    		May 2019 > Present<br>
+				• Collaborated with Heroku Runtime team to develop security vulnerability scanner for internal service Docker images using Go and various open source libraries, such as Clair<br>
+				• Utilized Slack API to deliver daily digest of high-severity actionable vulnerabilities to engineers along with potential solutions<br>
+				• Deployed services and job to Kubernetes cluster to easily scale and preserve uptime<br>
+	    	<p>
+	    		<b>Mobile Developer @ U of M Division of Public Safety and Security (Ann Arbor, MI)</b><br>
+	    		Sep 2017 > Present<br>
+	    		• Targeted issue of lacking UI and low user count of iOS application by completing redesign and overhaul using Swift<br>
+				• Added responsiveness and features like image reporting<br>
+				• Improved system’s backend routing for scalability<br>
+				• Photographed events to improve PR of division<br>
+	    	</p>
+	    	<p>
+	    		<b>Software Engineering Intern @ Yantra Inc. (Santa Clara, CA)</b><br>
+				May 2018 > July 2018<br>
+				• Solved issue of inconsistency between e-commerce stores and business data<br>
+				• Developed integration, or two-sided bridge of data, between NetSuite and Shopify<br>
+				• Integration syncs data regarding customers, orders, products, and fulfillments in real time<br>
+			</p>
+			<p>
+				<b>Operations and Strategy @ U of M Solar Car Team</b><br>
+				Sep 2017 > May 2018<br>
+				• Began development of live weather overlay for StratMap, a live tracker of the car in the race<br>
+				• Organized trip to NAIAS for the team of 60 students<br>
+				• Worked with manufacturers to build Novum's roll cage for American Solar Challenge<br>
+			</p>
+			<h3>Projects</h3>
+			<p>
+				<b>Co-Founder @ Sents (sents.dev)</b><br>
+				April 2019 > Present<br>
+				• Created and led team of three students<br>
+				• Designed and implemented web tool to visualize correlation between stock price and sentiment, by scraping data from various forums and utilizing it in a machine learning model<br>
+			</p>
+			<p>
+				<b>Developer @ Cape Drive</b><br>
+				June 2018<br>
+				• Created integration with Javascript between Google Drive and thecape.ai (discontinued)<br>
+				• Enabled users to ask questions about content of Drive documents, based on context and NLP<br>
+				• Beta was deployed on personal website<br>
+			</p>
+			<p>
+				<b>Developer @ Stockr</b><br>
+				October 2017<br>
+				• Developed algorithm with Python which scraped Yahoo Finance and StockTwits<br>
+				• Delivered graphs and sentiment data for quick, informed decisions when the market opened<br>
+			</p>
+			<p>
+				<b>Founder @ Neighbor Ninja</b><br>
+				May 2016 > Dec 2016<br>
+				• Devised and built iOS application with Swift for improved crime awareness through preventative measures like reports based on geolocation<br>
+				• Met Yantra Inc. team at Shutterfly weekly to present progress<br>
+				• Led team of peers and pivoted to target university campuses instead of communities<br>
+			</p>
+			<p>
+				<b>Developer @ AMZNtrackr</b><br>
+				October 2015<br>
+				• Programmed web application with Javascript which tracked prices of Amazon products and notified users when prices changed<br>
+				• Created at HS Hacks II hackathon with team of four<br>
+			</p>
+			<h3>Honors</h3>
+			<p>
+				<b>Eagle Scout</b><br>
+				April 2014<br>
+				Planned and implemented Eagle Project by building a retaining wall that addressed erosion on trails and achieved the highest rank of Scouting.<br>
+			</p>
+			<p>
+				<b>University Honors, Dean’s List</b><br>
+				December 2017, April 2019<br>
+				Recognized for academic standing, determined by high GPA and course credits.<br>
+			</p> 
+	    </div>
+	  </div>
+	</div>
+	<footer class='container'>
+		<div class="row align-items-center" style="margin-bottom: 40px;">
+			<div class="col-lg-12 text-center">
+				<a href="https://github.com/samastv">
+					<span class='fa-stack'>
+						<i class="far fa-circle fa-stack-2x"></i>
+						<i class="fab fa-github fa-stack-1x"></i>		
+					</span>
+				</a>
+				<a href="https://www.facebook.com/samastv">
+					<span class='fa-stack'>
+						<i class="far fa-circle fa-stack-2x"></i>
+						<i class="fab fa-facebook-f fa-stack-1x"></i>		
+					</span>
+				</a>
+				<a href="https://twitter.com/samastvarma">
+					<span class='fa-stack'>
+						<i class="far fa-circle fa-stack-2x"></i>
+						<i class="fab fa-twitter fa-stack-1x"></i>		
+					</span>
+				</a>
+				<a href="https://www.linkedin.com/in/samast/">
+					<span class='fa-stack'>
+						<i class="far fa-circle fa-stack-2x"></i>
+						<i class="fab fa-linkedin-in fa-stack-1x"></i>		
+					</span>
+				</a>
+				<a href="https://medium.com/@samastv">
+					<span class='fa-stack'>
+						<i class="far fa-circle fa-stack-2x"></i>
+						<i class="fab fa-medium-m fa-stack-1x"></i>		
+					</span>
+				</a>
+				<a href="https://www.flickr.com/photos/115797826@N06/albums">
+					<span class='fa-stack'>
+						<i class="far fa-circle fa-stack-2x"></i>
+						<i class="fab fa-flickr fa-stack-1x"></i>		
+					</span>
+				</a>
+			</div>
+		</div>
+	</footer>
+</body>
 </html>
