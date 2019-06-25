@@ -1,0 +1,39 @@
+body {
+  margin: 0; 
+  font-weight: 500;
+  font-family: 'HelveticaNeue';
+}
+
+.intro {
+  width: 100%;
+  background-color: #DCEDFF;
+  color: #8F91A2;
+  height: 100vh;
+}
+
+.centered {
+  position: absolute;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1px;
+  word-wrap: normal;
+
+}
+
+h1 {
+  font-size: 6em;
+  color: #505A5B;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+
+
