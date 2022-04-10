@@ -1,15 +1,115 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114361966-1"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-	  gtag('config', 'UA-114361966-1');
+		gtag('config', 'UA-114361966-1');
 	</script>
-	<meta http-equiv="refresh" content="0; url=https://www.flickr.com/photos/115797826@N06/albums" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
 </head>
+
+<body>
+	<nav class="navbar bg-faded">
+		<div class="container" style="margin-bottom: 40px;">
+			<ul class="nav navbar-nav navbar-logo mx-auto">
+				<li class="nav-item">
+					<h2>HI, I'M SAMAST VARMA<h2>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container" style="margin-bottom: 80px;">
+		<div class="mx-auto title" style="width: 70%; text-align: center;">
+			I am a runner, <u><b>photographer</b></u>, coffee addict, and engineer working at Salesforce.
+		</div>
+	</div>
+	<div class=".container-fluid">
+		<div class="row">
+			<div class=".col-sm" style="margin-left: 40px; margin-right: 40px;">
+				<h1>Portraits</h1>
+			</div>
+			<div class="col">
+				<div class="card-columns">
+					<script>
+						var toAdd = document.createDocumentFragment();
+						var portraitFileNames = ["021222Anna-03571.jpg", "030622Redding-03651.jpeg", "SF-August-02410.JPG", "SF-December-03213.JPG",
+							"SJC-03367.JPG", "NYC-03052.JPG", "20171208-AditiRithuSahanaShoot-48.jpeg"];
+						portraitFileNames.forEach((name, index) => {
+							var newDiv = document.createElement('div');
+							newDiv.className = 'card';
+							var newImg = document.createElement('img');
+							newImg.src = 'portraits/' + name;
+							newImg.className = 'card-img-top';
+							newDiv.appendChild(newImg);
+							toAdd.appendChild(newDiv);
+							console.log(newDiv);
+						});
+						document.getElementsByClassName('card-columns')[0].appendChild(toAdd);
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class=".col-sm" style="margin-left: 40px; margin-right: 40px;">
+				<h1>Events</h1>
+			</div>
+			<div class="col">
+				<div class="card-columns">
+					<script>
+						var toAdd = document.createDocumentFragment();
+						var eventFileNames = ["04082022MCHSProm-03791.jpg", "20171103-Sarani-229.jpeg", "20180210-Swaranjali-90.jpeg", "20180217-A2Dhoom-418.jpeg",
+							"20180505-WHSProm2018-67.jpeg", "KanchanWeddingJuly2021-01574.JPG", "KanchanWeddingJuly2021-01597.JPG"];
+						eventFileNames.forEach((name, index) => {
+							var newDiv = document.createElement('div');
+							newDiv.className = 'card';
+							var newImg = document.createElement('img');
+							newImg.src = 'events/' + name;
+							newImg.className = 'card-img-top';
+							newDiv.appendChild(newImg);
+							toAdd.appendChild(newDiv);
+							console.log(newDiv);
+						});
+						document.getElementsByClassName('card-columns')[1].appendChild(toAdd);
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class=".col-sm" style="margin-left: 40px; margin-right: 40px;">
+				<h1>Sights</h1>
+			</div>
+			<div class="col">
+				<div class="card-columns">
+					<script>
+						var toAdd = document.createDocumentFragment();
+						var eventFileNames = ["Colorado-2.JPG", "Davenport-03165.JPG", "NilesJuly2021.JPG", "NYC-02971.JPG", "Oahu-02019.JPG", "Seattle2021.JPEG",
+							"Switz.JPG"];
+						eventFileNames.forEach((name, index) => {
+							var newDiv = document.createElement('div');
+							newDiv.className = 'card';
+							var newImg = document.createElement('img');
+							newImg.src = 'sights/' + name;
+							newImg.className = 'card-img-top';
+							newDiv.appendChild(newImg);
+							toAdd.appendChild(newDiv);
+							console.log(newDiv);
+						});
+						document.getElementsByClassName('card-columns')[2].appendChild(toAdd);
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
 </html>
