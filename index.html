@@ -37,23 +37,31 @@
 			font-style: normal;
 		}
 
-		@font-face {
-			font-family: 'times_sans_serifregular';
-			src: url('./assets/fonts/times-sans-serif-webfont.woff2') format('woff2'),
-				url('./assets/fonts/times-sans-serif-webfont.woff') format('woff');
-			font-weight: normal;
-			font-style: normal;
-		}
-
-		h2 {
-			font-family: times_sans_serifregular;
-			font-size: 18px;
-			font-stretch: extra-expanded;
-		}
-
 		h1 {
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 400;
+			letter-spacing: 5px;
+		}
+
+		h2 {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 30px;
+		}
+
+		h3 {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 22px;
+		}
+
+		h4 {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 18px;
+		}
+
+		p {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			font-size: 14px;
 		}
 
 		.navbar {
@@ -76,6 +84,12 @@
 		a {
 			color: black;
 			text-decoration: none;
+		}
+
+		b {
+			font-weight: 400;
+			text-decoration: none;
+			font-size: 16px;
 		}
 
 		@media only screen and (max-width: 400px) {
@@ -120,25 +134,25 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 	<nav class="navbar bg-faded">
-		<div class="container" style="margin-bottom: 40px;">
+		<div class="container" style="margin-bottom: 10px; margin-top: 10px;">
 			<ul class="nav navbar-nav navbar-logo mx-auto">
 				<li class="nav-item">
-					<h2>HI, I'M SAMAST VARMA<h2>
+					<h1 class="text-center">Hi, I'm Samast Varma<h1>
 				</li>
 			</ul>
 		</div>
 	</nav>
 	<div class="container" style="margin-bottom: 80px;">
-		<div class="mx-auto title" style="width: 70%; text-align: center;">
+		<h4 class="text-center">
 			I am a runner, photographer, coffee addict, and engineer working at Salesforce.
-		</div>
+		</h4>
 	</div>
 	<div class="container" style="margin-bottom: 40px;">
 		<div class="row">
-			<div class="col-lg-6">
-				<h1>About Me</h1>
+			<div class="col-sm-3">
+				<h2>About Me</h2>
 			</div>
-			<div class="col-lg-6 content">
+			<div class="col-sm-9 content">
 				<p>
 					I am currently an MTS at Salesforce. I'm working on the Secure Connectivity team, which
 					oversees the Named Credentials and Private Connect products.
@@ -151,11 +165,10 @@
 	</div>
 	<div class="container" style="margin-bottom: 40px;">
 		<div class="row">
-			<div class="col-lg-6">
-				<h1>Resume</h1>
+			<div class="col-sm-3">
+				<h2>Education</h2>
 			</div>
-			<div class="col-lg-6 content">
-				<h3>Education</h3>
+			<div class="col-sm-9 content">
 				<p>
 					<b>University of Michigan (Ann Arbor, MI)</b><br>
 					December 2020<br>
@@ -164,7 +177,11 @@
 					GPA 3.60/4.00<br>
 					Magna Cum Laude<br>
 				</p>
-				<h3>Experience</h3>
+			</div>
+			<div class="col-sm-3">
+				<h2>Experience</h2>
+			</div>
+			<div class="col-sm-9 content">
 				<p>
 					<b>Software Engineer @ Salesforce (San Francisco, CA)</b><br>
 					Jan 2021 > Present<br>
@@ -212,7 +229,11 @@
 					• Organized trip to NAIAS for the team of 60 students<br>
 					• Worked with manufacturers to build Novum's roll cage for American Solar Challenge<br>
 				</p>
-				<h3>Projects</h3>
+			</div>
+			<div class="col-sm-3">
+				<h2>Projects</h2>
+			</div>
+			<div class="col-sm-9 content">
 				<p>
 					<b>Founder @ <a href="https://pursu.dev/">Pursu (<i>pursu.dev</i>)</a></b><br>
 					April 2020 > Mar 2021<br>
@@ -259,7 +280,11 @@
 					users when prices changed<br>
 					• Created at HS Hacks II hackathon with team of four<br>
 				</p>
-				<h3>Honors</h3>
+			</div>
+			<div class="col-sm-3">
+				<h2>Honors</h2>
+			</div>
+			<div class="col-sm-9 content">
 				<p>
 					<b>Eagle Scout</b><br>
 					April 2014<br>
