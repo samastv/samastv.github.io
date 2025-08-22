@@ -15,14 +15,27 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
 	<title>Samast Varma</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="photography.css">
 </head>
 
 <body>
-	<nav class="navbar bg-faded">
+	<div class="sticky-header">
+		<h2 class="current-section">PORTRAITS</h2>
+	</div>
+	
+	<div class="progress-indicator">
+		<div class="progress-dot active" data-section="portraits"></div>
+		<div class="progress-dot" data-section="events"></div>
+		<div class="progress-dot" data-section="sights"></div>
+	</div>
+	
+
+	<div class="intro-section">
 		<div class="container" style="margin-bottom: 10px; margin-top: 10px;">
 			<ul class="nav navbar-nav navbar-logo mx-auto">
 				<li class="nav-item">
@@ -30,87 +43,205 @@
 				</li>
 			</ul>
 		</div>
-	</nav>
-	<div class="container" style="margin-bottom: 60px;">
-		<h3 class="text-center">
-			I would love to photograph your next event. <a href="mailto:samastv@umich.edu"><i>Email</i></a> me for
-			availability and pricing.
-		</h3>
-	</div>
-	<div class=".container-fluid">
-		<div class="row" style="margin-left: 20px; margin-right: 20px;">
-			<div class=".col-sm" style="margin-right: 20px;">
-				<h2>PORTRAITS</h2>
-			</div>
-			<div class="col">
-				<div class="card-columns">
-					<script>
-						var toAdd = document.createDocumentFragment();
-						var portraitFileNames = ["021222Anna-03571.jpg", "030622Redding-03651.jpeg", "SF-August-02410.JPG", "SF-December-03213.JPG",
-							"SJC-03367.JPG", "NYC-03052.JPG", "20171208-AditiRithuSahanaShoot-48.jpeg"];
-						portraitFileNames.forEach((name, index) => {
-							var newDiv = document.createElement('div');
-							newDiv.className = 'card';
-							var newImg = document.createElement('img');
-							newImg.src = 'portraits/' + name;
-							newImg.className = 'card-img-top';
-							newDiv.appendChild(newImg);
-							toAdd.appendChild(newDiv);
-						});
-						document.getElementsByClassName('card-columns')[0].appendChild(toAdd);
-					</script>
-				</div>
-			</div>
-		</div>
-		<div class="row" style="margin-left: 20px; margin-right: 20px;">
-			<div class=".col-sm" style="margin-right: 20px;">
-				<h2>EVENTS</h2>
-			</div>
-			<div class="col">
-				<div class="card-columns">
-					<script>
-						var toAdd = document.createDocumentFragment();
-						var eventFileNames = ["051422AHSProm-57.jpg", "051422AHSProm-96.jpg", "04082022MCHSProm-03791.jpg", "20171103-Sarani-229.jpeg", "20180210-Swaranjali-90.jpeg", "20180217-A2Dhoom-418.jpeg",
-							"20180505-WHSProm2018-67.jpeg", "KanchanWeddingJuly2021-01574.JPG", "KanchanWeddingJuly2021-01597.JPG"];
-						eventFileNames.forEach((name, index) => {
-							var newDiv = document.createElement('div');
-							newDiv.className = 'card';
-							var newImg = document.createElement('img');
-							newImg.src = 'events/' + name;
-							newImg.className = 'card-img-top';
-							newDiv.appendChild(newImg);
-							toAdd.appendChild(newDiv);
-						});
-						document.getElementsByClassName('card-columns')[1].appendChild(toAdd);
-					</script>
-				</div>
-			</div>
-		</div>
-		<div class="row" style="margin-left: 20px; margin-right: 20px;">
-			<div class=".col-sm" style="margin-right: 20px;">
-				<h2>SIGHTS</h2>
-			</div>
-			<div class="col">
-				<div class="card-columns">
-					<script>
-						var toAdd = document.createDocumentFragment();
-						var eventFileNames = ["Colorado-2.JPG", "Davenport-03165.JPG", "NilesJuly2021.JPG", "NYC-02971.JPG", "Oahu-02019.JPG", "Seattle2021.JPEG",
-							"Switz.JPG"];
-						eventFileNames.forEach((name, index) => {
-							var newDiv = document.createElement('div');
-							newDiv.className = 'card';
-							var newImg = document.createElement('img');
-							newImg.src = 'sights/' + name;
-							newImg.className = 'card-img-top';
-							newDiv.appendChild(newImg);
-							toAdd.appendChild(newDiv);
-						});
-						document.getElementsByClassName('card-columns')[2].appendChild(toAdd);
-					</script>
-				</div>
-			</div>
+		<div class="container" style="margin-bottom: 60px;">
+			<h3 class="text-center">
+				I would love to photograph your next event. <a href="mailto:samastv@umich.edu"><i>Email</i></a> me for
+				availability and pricing.
+			</h3>
 		</div>
 	</div>
+	<div class="container-fluid">
+		<div class="photo-section" id="portraits" style="margin-left: 20px; margin-right: 20px;">
+			<h2 class="section-title">PORTRAITS</h2>
+			<div class="masonry-grid" id="portraits-grid"></div>
+		</div>
+		
+		<div class="photo-section" id="events" style="margin-left: 20px; margin-right: 20px;">
+			<h2 class="section-title">EVENTS</h2>
+			<div class="masonry-grid" id="events-grid"></div>
+		</div>
+		
+		<div class="photo-section" id="sights" style="margin-left: 20px; margin-right: 20px;">
+			<h2 class="section-title">SIGHTS</h2>
+			<div class="masonry-grid" id="sights-grid"></div>
+		</div>
+	</div>
+
+	<script>
+		
+		function createMasonryGrid(containerId, fileNames, folder) {
+			const container = document.getElementById(containerId);
+			const toAdd = document.createDocumentFragment();
+			
+			fileNames.forEach((name, index) => {
+				const gridItem = document.createElement('div');
+				gridItem.className = 'masonry-grid-item';
+				
+				const img = document.createElement('img');
+				img.src = folder + '/' + name;
+				img.alt = name.split('.')[0];
+				img.loading = 'lazy';
+				
+				gridItem.appendChild(img);
+				toAdd.appendChild(gridItem);
+			});
+			
+			container.appendChild(toAdd);
+			
+			// Initialize Masonry after adding elements
+			const msnry = new Masonry(container, {
+				itemSelector: '.masonry-grid-item',
+				columnWidth: '.masonry-grid-item',
+				percentPosition: true,
+				gutter: 20
+			});
+			
+			// Re-layout after all images are loaded
+			imagesLoaded(container, function() {
+				msnry.layout();
+			});
+		}
+		
+		// Simple imagesLoaded polyfill
+		function imagesLoaded(container, callback) {
+			const images = container.querySelectorAll('img');
+			let loadedCount = 0;
+			const totalImages = images.length;
+			
+			if (totalImages === 0) {
+				callback();
+				return;
+			}
+			
+			images.forEach(img => {
+				if (img.complete) {
+					loadedCount++;
+					if (loadedCount === totalImages) callback();
+				} else {
+					img.onload = img.onerror = () => {
+						loadedCount++;
+						if (loadedCount === totalImages) callback();
+					};
+				}
+			});
+		}
+		
+		// Intersection Observer for section detection
+		const sectionObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const sectionId = entry.target.id;
+					updateActiveSection(sectionId);
+					
+					// Trigger animations
+					const sectionTitle = entry.target.querySelector('.section-title');
+					const masonryGrid = entry.target.querySelector('.masonry-grid');
+					
+					if (sectionTitle) sectionTitle.classList.add('visible');
+					if (masonryGrid) masonryGrid.classList.add('visible');
+				}
+			});
+		}, {
+			threshold: 0.2,
+			rootMargin: '-50px 0px -50px 0px'
+		});
+		
+		function updateActiveSection(sectionId) {
+			// Update section header
+			const currentSectionEl = document.querySelector('.current-section');
+			const sectionNames = {
+				'portraits': 'PORTRAITS',
+				'events': 'EVENTS', 
+				'sights': 'SIGHTS'
+			};
+			
+			if (sectionNames[sectionId]) {
+				currentSectionEl.textContent = sectionNames[sectionId];
+				
+				// Update progress dots
+				document.querySelectorAll('.progress-dot').forEach(dot => {
+					dot.classList.remove('active');
+					if (dot.dataset.section === sectionId) {
+						dot.classList.add('active');
+					}
+				});
+			}
+		}
+		
+		// Header visibility control
+		let lastScrollY = window.scrollY;
+		let headerVisible = false;
+		
+		window.addEventListener('scroll', () => {
+			const currentScrollY = window.scrollY;
+			const stickyHeader = document.querySelector('.sticky-header');
+			const introSection = document.querySelector('.intro-section');
+			const introHeight = introSection.offsetHeight;
+			
+			// Show header only after scrolling past intro
+			if (currentScrollY > introHeight - 100) {
+				if (!headerVisible) {
+					stickyHeader.classList.add('visible');
+					stickyHeader.classList.remove('hidden');
+					headerVisible = true;
+				}
+				
+				// Auto-hide on scroll down, show on scroll up
+				if (currentScrollY > lastScrollY && currentScrollY > introHeight + 100) {
+					stickyHeader.classList.add('hidden');
+					stickyHeader.classList.remove('visible');
+				} else if (currentScrollY < lastScrollY) {
+					stickyHeader.classList.add('visible');
+					stickyHeader.classList.remove('hidden');
+				}
+			} else {
+				// Hide header when in intro section
+				stickyHeader.classList.remove('visible');
+				stickyHeader.classList.add('hidden');
+				headerVisible = false;
+			}
+			
+			lastScrollY = currentScrollY;
+		});
+		
+		// Progress dot navigation
+		document.querySelectorAll('.progress-dot').forEach(element => {
+			element.addEventListener('click', (e) => {
+				e.preventDefault();
+				const targetSection = element.dataset.section;
+				const targetElement = document.getElementById(targetSection);
+				
+				if (targetElement) {
+					targetElement.scrollIntoView({
+						behavior: 'smooth',
+						block: 'start'
+					});
+				}
+			});
+		});
+		
+		// Initialize grids when DOM is loaded
+		document.addEventListener('DOMContentLoaded', function() {
+			const portraitFileNames = ["021222Anna-03571.jpg", "030622Redding-03651.jpeg", "SF-August-02410.JPG", "SF-December-03213.JPG",
+				"SJC-03367.JPG", "NYC-03052.JPG", "20171208-AditiRithuSahanaShoot-48.jpeg"];
+			
+			const eventFileNames = ["051422AHSProm-57.jpg", "051422AHSProm-96.jpg", "04082022MCHSProm-03791.jpg", "20171103-Sarani-229.jpeg", "20180210-Swaranjali-90.jpeg", "20180217-A2Dhoom-418.jpeg",
+				"20180505-WHSProm2018-67.jpeg", "KanchanWeddingJuly2021-01574.JPG", "KanchanWeddingJuly2021-01597.JPG"];
+			
+			const sightFileNames = ["Colorado-2.JPG", "Davenport-03165.JPG", "NilesJuly2021.JPG", "NYC-02971.JPG", "Oahu-02019.JPG", "Seattle2021.JPEG",
+				"Switz.JPG"];
+			
+			// Create grids
+			createMasonryGrid('portraits-grid', portraitFileNames, 'portraits');
+			createMasonryGrid('events-grid', eventFileNames, 'events');
+			createMasonryGrid('sights-grid', sightFileNames, 'sights');
+			
+			// Observe sections for intersection
+			document.querySelectorAll('.photo-section').forEach(section => {
+				sectionObserver.observe(section);
+			});
+		});
+	</script>
 
 </body>
 
