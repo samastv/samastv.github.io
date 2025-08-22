@@ -82,24 +82,38 @@
 				img.alt = name.split('.')[0];
 				img.loading = 'lazy';
 				
+				// Add error handling for image loading
+				img.onerror = function() {
+					console.log('Failed to load image:', this.src);
+					this.style.display = 'none';
+				};
+				
 				gridItem.appendChild(img);
 				toAdd.appendChild(gridItem);
 			});
 			
 			container.appendChild(toAdd);
 			
-			// Initialize Masonry after adding elements
-			const msnry = new Masonry(container, {
-				itemSelector: '.masonry-grid-item',
-				columnWidth: '.masonry-grid-item',
-				percentPosition: true,
-				gutter: 20
-			});
-			
-			// Re-layout after all images are loaded
-			imagesLoaded(container, function() {
-				msnry.layout();
-			});
+			// For mobile devices, use CSS flexbox instead of Masonry
+			if (window.innerWidth <= 768) {
+				// Re-layout after all images are loaded (without Masonry)
+				imagesLoaded(container, function() {
+					container.classList.add('visible');
+				});
+			} else {
+				// Initialize Masonry for desktop
+				const msnry = new Masonry(container, {
+					itemSelector: '.masonry-grid-item',
+					columnWidth: '.masonry-grid-item',
+					percentPosition: true,
+					gutter: 20
+				});
+				
+				// Re-layout after all images are loaded
+				imagesLoaded(container, function() {
+					msnry.layout();
+				});
+			}
 		}
 		
 		// Simple imagesLoaded polyfill
@@ -142,8 +156,8 @@
 				}
 			});
 		}, {
-			threshold: 0.2,
-			rootMargin: '-50px 0px -50px 0px'
+			threshold: window.innerWidth <= 768 ? 0.1 : 0.2,
+			rootMargin: window.innerWidth <= 768 ? '-30px 0px -30px 0px' : '-50px 0px -50px 0px'
 		});
 		
 		function updateActiveSection(sectionId) {
@@ -204,24 +218,38 @@
 			lastScrollY = currentScrollY;
 		});
 		
-		// Progress dot navigation
-		document.querySelectorAll('.progress-dot').forEach(element => {
-			element.addEventListener('click', (e) => {
-				e.preventDefault();
-				const targetSection = element.dataset.section;
-				const targetElement = document.getElementById(targetSection);
-				
-				if (targetElement) {
-					targetElement.scrollIntoView({
-						behavior: 'smooth',
-						block: 'start'
-					});
-				}
-			});
-		});
-		
 		// Initialize grids when DOM is loaded
 		document.addEventListener('DOMContentLoaded', function() {
+			// Progress dot navigation - moved inside DOMContentLoaded to ensure elements exist
+			document.querySelectorAll('.progress-dot').forEach(element => {
+				element.addEventListener('click', (e) => {
+					e.preventDefault();
+					const targetSection = element.dataset.section;
+					const targetElement = document.getElementById(targetSection);
+					
+					if (targetElement) {
+						// Calculate offset for better positioning
+						const headerOffset = 80;
+						const elementPosition = targetElement.offsetTop - headerOffset;
+						
+						window.scrollTo({
+							top: elementPosition,
+							behavior: 'smooth'
+						});
+						
+						// Immediately update active section
+						updateActiveSection(targetSection);
+					}
+				});
+			});
+			
+			// Add touch event handling for mobile
+			document.querySelectorAll('.progress-dot').forEach(element => {
+				element.addEventListener('touchstart', (e) => {
+					e.preventDefault();
+					element.click();
+				});
+			});
 			const portraitFileNames = ["021222Anna-03571.jpg", "030622Redding-03651.jpeg", "SF-August-02410.JPG", "SF-December-03213.JPG",
 				"SJC-03367.JPG", "NYC-03052.JPG", "20171208-AditiRithuSahanaShoot-48.jpeg"];
 			
@@ -239,6 +267,24 @@
 			// Observe sections for intersection
 			document.querySelectorAll('.photo-section').forEach(section => {
 				sectionObserver.observe(section);
+			});
+			
+			// Handle window resize for responsive behavior
+			let resizeTimeout;
+			window.addEventListener('resize', function() {
+				clearTimeout(resizeTimeout);
+				resizeTimeout = setTimeout(function() {
+					// Re-trigger masonry layout on resize if needed
+					const masonryGrids = document.querySelectorAll('.masonry-grid');
+					masonryGrids.forEach(grid => {
+						const images = grid.querySelectorAll('img');
+						images.forEach(img => {
+							if (img.complete) {
+								img.dispatchEvent(new Event('load'));
+							}
+						});
+					});
+				}, 250);
 			});
 		});
 	</script>
