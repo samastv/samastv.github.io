@@ -88,9 +88,7 @@ b {
     margin-top: 20px;
 }
 
-.col-sm-3:has(+ .col-sm-9 .experience-grid) h2,
-.col-sm-3:has(+ .col-sm-9 .projects-grid) h2,
-.col-sm-3:has(+ .col-sm-9 .honors-grid) h2 {
+.col-sm-3 h2 {
     margin-top: 20px;
 }
 
