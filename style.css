@@ -92,6 +92,10 @@ b {
     margin-top: 20px;
 }
 
+.col-sm-9.content p:first-child {
+    margin-top: 20px;
+}
+
 
 @media (max-width: 768px) {
     .projects-grid, .experience-grid, .honors-grid {
